@@ -1,6 +1,13 @@
-require ( './helpers.js' );
+const { expect } = require('chai'); // Import assertion library
+const { 
+  distanceFromHqInBlocks, 
+  distanceFromHqInFeet, 
+  distanceTravelledInFeet, 
+  calculatesFarePrice 
+} = require('../index'); // Import functions from index.js
 
 describe('index.js', function() {
+  
   describe('distanceFromHqInBlocks()', function() {
     it('returns a distance in blocks', function() {
       expect(distanceFromHqInBlocks(43)).to.equal(1);
@@ -61,4 +68,5 @@ describe('index.js', function() {
       expect(calculatesFarePrice(34, 24)).to.equal('cannot travel that far');
     });
   });
+
 });
